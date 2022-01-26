@@ -1,4 +1,6 @@
 # modbus pour chaudiere kwb
+# include this file from your configuration.yaml like this:
+# modbus: !include kwb.yaml
 
     - name: modbuskwb
       type: tcp
