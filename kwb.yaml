@@ -1,0 +1,72 @@
+# modbus pour chaudiere kwb
+
+    - name: modbuskwb
+      type: tcp
+      host: 192.168.10.25
+      port: 502
+      sensors:
+        # boiler temp chaudiere
+      - name: boiler_temp
+        slave: 1
+        address: 8197
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # boiler temp retour
+      - name: boiler_return
+        slave: 1
+        address: 8202
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # boiler eau chaude sanitaire
+      - name: water_temp
+        slave: 1
+        address: 8608
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # tampon temp1
+      - name: tank_temp1
+        slave: 1
+        address: 8710
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # tampon temp3
+      - name: tank_temp3
+        slave: 1
+        address: 8778
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # tampon temp5
+      - name: tank_temp5
+        slave: 1
+        address: 8846
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # temp exterieure sonde
+      - name: outside_temp
+        slave: 1
+        address: 8250
+        input_type: input
+#        data_type: string
+        scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+
+### end KWB
