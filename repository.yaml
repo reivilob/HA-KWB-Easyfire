@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: KWB Easyfire Home Assistant add-on repository
-url: 'https://github.com/home-assistant/addons-example'
+url: 'https://github.com/reivilob/KWB-Easyfire/'
 maintainer: Olivier Bourgeois <reivilob@gmail.com>
