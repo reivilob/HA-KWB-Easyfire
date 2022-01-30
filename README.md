@@ -2,6 +2,12 @@
 
 This repository can be used as to help you connecting your KWB Easyfire to your Home Assistant.
 
+only the kwb.yaml is useful
+
+Only add to your configuration.yaml :
+modbus: !include kwb.yaml
+
+you simply display your sensor in your dashboard or use it to calculate some values, switch,...
 
 <!--
 
