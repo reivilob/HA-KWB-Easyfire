@@ -1,5 +1,6 @@
 # modbus pour chaudiere kwb
-
+# include this file from your configuration.yaml like this:
+# modbus: !include kwb.yaml
     - name: modbuskwb
       type: tcp
       host: 192.168.10.25
