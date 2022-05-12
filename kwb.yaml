@@ -1,6 +1,4 @@
 # modbus pour chaudiere kwb
-# include this file from your configuration.yaml like this:
-# modbus: !include kwb.yaml
 
     - name: modbuskwb
       type: tcp
@@ -32,6 +30,15 @@
         input_type: input
 #        data_type: string
         scan_interval: 60
+        scale: 0.1
+        unit_of_measurement: °C
+        # boiler eau chaude sanitaire consigne
+      - name: water_temp_setpoint
+        slave: 1
+        address: 8675
+        input_type: input
+#        data_type: string
+        scan_interval: 3600
         scale: 0.1
         unit_of_measurement: °C
         # tampon temp1
@@ -70,5 +77,19 @@
         scan_interval: 60
         scale: 0.1
         unit_of_measurement: °C
-
+      - name: level_ash
+        slave: 1
+        address: 9497
+        input_type: input
+#        data_type: string
+        scan_interval: 3600
+        scale: 0.1
+        unit_of_measurement: '%'
+      - name: level_pellets
+        slave: 1
+        address: 24928
+#        input_type: input
+#        data_type: string
+        scan_interval: 3600
+        unit_of_measurement: kg
 ### end KWB
